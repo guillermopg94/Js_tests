@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    alert("Dale a aceptar");
+     
+    var numero = 9 + 1;
+    var texto = " Esto es un texto";
+    console.log("la suma es: "+numero +". " + texto);
+    
+    </script>
+<body>
+   
+    <button onclick="document.getElementById('myImage').src='bombillaon.JPG'">Turn on the light</button>
+
+<img id="myImage" src="bombillaoff.JPG" style="width:100px">
+
+<button onclick="document.getElementById('myImage').src='bombillaoff.JPG'">Turn off the light</button>
+</body>
+</html>
