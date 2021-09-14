@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*JS exercises 21-22
+1.- Create a program that asks the name of a fruit.
+If is banana show an alert with the text "I like bananas".
+If is apple show an alert with the text "I like apples"
+In other case, show an alert with the text "I don't like fruits"
+
+2.- Ask using a prompt the name of a fruit and using the switch statement:
+if is a banana show in an alert “Banana is Good”.
+If is an orange show in a alert “I’m not a fan or orange”
+If is an apple show “Oh really, do you like apples?”
+
+3.- Write a for loop that will iterate from 0 to 10. 
+For each iteration of the for loop, it will multiply the number by 9
+and log the result (e.g. "2 * 9 = 18").
+
+4.- Create an array with the following elements: "Jose", "Lola",
+"Lorenzo","Mariluz" and "Maria Jose".
+Then ask the name of a teacher. Using a for loop (new version) 
+search for the name of the user and if you find the name show 
+a message saying "Name found", if not, show the message 
+"xxx is not a current teacher" where xxx is the name you have written in
+the prompt.
+Extra: Don’t take into account upper and lowercases of the name written.
+
+5.- Write a program to print (in console) the following pattern:
+
+1******
+12*****
+123****
+1234***
+12345**
+123456*
+1234567
+*/
+
+// ejercicio 3
+
+
+for (let i = 0; i < 10; i++) {
+
+var resultado = i * 9;
+console.log(resultado);
+}
+
+// ejercicio 5
+
+for (let i = 0; i < 7; i++) {
+            switch (i) {
+                case 0:
+                    console.log("1******");
+                    break;
+                case 1:
+                    console.log("12*****");
+                    break;
+                case 2:
+                    console.log("123****");
+                    break;
+                case 3:
+                    console.log("1234***");
+                    break;
+                case 4:
+                    console.log("12345**");
+                    break;
+                case 5:
+                    console.log("123456*");
+                case 4:
+                    console.log("1234567");
+            }
+        }
+
+
+
+        // ejercicio 1
+        var fruit = prompt("Write a fruit: ");
+
+        if (fruit == "banana") {
+            alert("I like bananas");
+        } else if (fruit == "apple") {
+
+            alert("I like apples");
+
+        } else {
+            alert("I don't like fruits");
+        }
+
+
+        // ejercicio 2
+
+        switch (fruit) {
+            case "banana":
+                alert("Banana is Good");
+                break;
+            case "orange":
+                alert("I’m not a fan of orange");
+                break;
+            case "apple":
+                alert("Oh really, do you like apples?");
+        }
+       
+
+
+        // ejercicio 4
+
+        let miArray = ["Jose", "Lola", "Lorenzo", "Mariluz", "Maria Jose"];
+        var name = prompt("Name of the teacher: ");
+
+        for (let i = 0; i < miArray.length; i++) {
+            if (name == miArray[i]) {
+                alert("Name found");
+            } else {
+                alert(name + " is not a current teacher");
+            }
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
