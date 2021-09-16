@@ -1,35 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
 
-window.onload=function(){
+        window.onload = function () {
+            /* 
+             8.- Read a string from a prompt and create an array with the split() function. Then, show the following information:
 
+Number of words
+First word
+Last wordS
+Words in reverse order
+Words ordered from a to z
+Words ordered from z to a
+This information has to be shown using document.write (check reference).
 
-    var palabra = prompt("Write a word: ");
-        var miArray = palabra.split(" "); 
+*/
+            var palabra = prompt("Write a word: ");
+            var miArray = palabra.split(" ");
 
-document.write(miArray.length);
-document.write("</br>");
-document.write(miArray[0]);
-document.write("</br>");
-document.write(miArray[miArray.length-1]);
-document.write("</br>");
-document.write(miArray.reverse());
+            document.write(miArray.length);
+            document.write("</br>");
+            document.write(miArray[0]);
+            document.write("</br>");
+            document.write(miArray[miArray.length - 1]);
+            document.write("</br>");
+            document.write(miArray.reverse());
+            document.write("</br>");
+            document.write(miArray.sort());
+            document.write("</br>");
+            document.write(miArray.sort().reverse());
 
-
-
-
- 
-
-}
-
+        }
     </script>
 </body>
 </html>
