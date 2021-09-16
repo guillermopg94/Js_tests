@@ -45,18 +45,17 @@ Extra: Don’t take into account upper and lowercases of the name written.
 1234567
 */
 
-// ejercicio 3
+        // ejercicio 3
 
+        for (let i = 0; i < 10; i++) {
 
-for (let i = 0; i < 10; i++) {
+            var resultado = i * 9;
+            console.log(resultado);
+        }
 
-var resultado = i * 9;
-console.log(resultado);
-}
+        // ejercicio 5
 
-// ejercicio 5
-
-for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 7; i++) {
             switch (i) {
                 case 0:
                     console.log("1******");
@@ -80,21 +79,16 @@ for (let i = 0; i < 7; i++) {
             }
         }
 
-
-
         // ejercicio 1
         var fruit = prompt("Write a fruit: ");
-
+        fruit = fruit.toLowerCase();
         if (fruit == "banana") {
             alert("I like bananas");
         } else if (fruit == "apple") {
-
             alert("I like apples");
-
         } else {
             alert("I don't like fruits");
         }
-
 
         // ejercicio 2
 
@@ -108,24 +102,34 @@ for (let i = 0; i < 7; i++) {
             case "apple":
                 alert("Oh really, do you like apples?");
         }
-       
-
 
         // ejercicio 4
 
         let miArray = ["Jose", "Lola", "Lorenzo", "Mariluz", "Maria Jose"];
         var name = prompt("Name of the teacher: ");
-
+        var found = false;
         for (let i = 0; i < miArray.length; i++) {
-            if (name == miArray[i]) {
+            if (name.toLowerCase() == miArray[i].toLocaleLowerCase()) {
                 alert("Name found");
-            } else {
-                alert(name + " is not a current teacher");
+                found = true;
+            } break;
+        }
+        if (!found){
+             alert(name + " is not a current teacher");
+        }
+       
+
+        for (let value of miArray) {
+
+            if (value.toLocaleLowerCase() == name.toLowerCase()) {
+
+                alert("found");
+
+
             }
+
         }
 
-
-        
     </script>
 </body>
 
