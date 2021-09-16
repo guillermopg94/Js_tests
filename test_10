@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+
+            /*  10.- An e-commerce has developed a program to categorize its clients depending on their expenses. Standard clients spend less than
+               25.34€. Bronze clients spend more than 25.34€, but less than 57.16€. Silver clients spend
+               57.16€ but less than 68.04€ and gold clients spend more than 68.04€. Create a program that ask the expenses of the client and tell you the type of client he is.
+  */
+
+  clients();
+
+            function clients() {
+                var expenses = parseInt(prompt("your expenses: "));
+                if (expenses < 25.34) {
+                    alert("You are Standard client");
+                    clients();
+                } else if (expenses > 25.34 && expenses < 57.16) {
+                    alert("You are Bronze client");
+                    clients();
+                } else if (expenses > 57.16 && expenses < 68.04) {
+                    alert("You are Silver client");
+                    clients();
+                } else if (expenses > 68.04) {
+                    alert("You are Gold client");
+                    clients();
+
+                }
+            }
+        }
+    </script>
+</body>
+</html>
