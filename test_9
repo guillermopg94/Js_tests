@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+
+            /* 9.- Create a program that asks you a password. If the password is "daw", show an alert with the message 
+            "Hello DAW pupil" and the system's time. If the password is wrong, show the message "Access denied".
+             */
+
+            var pass = prompt("password: ").toLocaleLowerCase();
+
+            while (pass != "daw") {
+                alert("Acces denied");
+                var pass = prompt("password: ").toLocaleLowerCase();
+            }
+
+            alert("Hello DAW pupil");
+
+        }
+    </script>
+</body>
+
+</html>
