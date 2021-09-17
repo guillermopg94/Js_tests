@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+window.onload = function () {
+
+    var array1 = [34, "hello", true, "bye", "password", "35469gff", 423];
+
+    var position = parseInt (prompt("posicion del array: "));
+
+    for(var i = 0; i < array1.length();i++){
+
+        if (i==position){
+            var resultado = array1[i];
+        }
+        alert(resultado);
+    }
+}
+    </script>
+</body>
+</html>
