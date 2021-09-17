@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function () {
+
+            calculo();
+            function calculo() {
+                var eleccion = prompt(" Cálculo: \n multiplicacion = m \n division = d \n resta = r \n suma = s");
+
+                if (eleccion == "m" || eleccion == "d" || eleccion == "r" || eleccion == "s") {
+
+                    switch (eleccion) {
+                        case "m":
+
+                            var num1 = prompt("Dime un numero");
+
+                            var num2 = prompt("Dime otro numero");
+
+                            var mult = num1 * num2;
+
+                            alert(mult);
+                            calculo();
+                            break;
+                        case "d":
+                            var num1 = prompt("Dime un numero");
+
+                            var num2 = prompt("Dime otro numero");
+                            var div = num1 / num2;
+
+                            alert(div);
+                            calculo();
+                            break;
+
+                        case "r":
+                            var num1 = prompt("Dime un numero");
+
+                            var num2 = prompt("Dime otro numero");
+                            var rest = num1 - num2;
+
+                            alert(rest);
+                            calculo();
+                            break;
+
+                        case "s":
+                            var num1 = parseInt(prompt("Dime un numero"));
+
+                            var num2 = parseInt(prompt("Dime otro numero"));
+                            var sum = num1 + num2;
+
+                            alert(sum);
+                            calculo();
+                    }
+                } else {
+                    alert("Eso no es una operacion valida");
+                    calculo();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
