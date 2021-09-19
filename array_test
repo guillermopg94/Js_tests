@@ -1,27 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-window.onload = function () {
+        window.onload = function () {
 
-    var array1 = [34, "hello", true, "bye", "password", "35469gff", 423];
 
-    var position = parseInt (prompt("posicion del array: "));
+            /* 
+            EXTRA1: Write a JavaScript function that asks a number and gets the element in that position of an array. If the number is negative or beyond the array's length show an error message.
+        
+        EXTRA2: Write a program to join all elements of a five elements array into a string.
+        
+        EXTRA3: Create a small calculator that asks an operation (add, subtract, multiply, divide) and two numbers. Perform the calculation and show the result. 
+        Try not to parse the prompted numbers and check if the calculations work fine. 
+        Extra -> Use the calculator until the operation is "exit".
+            
+            */
 
-    for(var i = 0; i < array1.length();i++){
+            var array1 = [34, "hello", true, "bye", "password", "35469gff", 423];
 
-        if (i==position){
-            var resultado = array1[i];
+            var position = prompt("posicion del array: ");
+
+
+            if (position > 0 || position < array1.length) {
+                for (var i = 0; i < array1.length; i++) {
+
+                    if ( position == i) {
+                        alert("hola");
+                        var resultado = array1[i];
+                    }
+                    alert(resultado);
+                }
+
+
+            } else {
+                alert("error");
+
+            }
+
         }
-        alert(resultado);
-    }
-}
     </script>
 </body>
+
 </html>
