@@ -6,26 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
     <script>
-      /*22 - Ask for 5 grades and save them in an array called grades[]. Find out if there are any failing grades in the array (below 5). Use higher-class functions. */
+      /* 21 - Ask for 5 ages and save them in an array called ages[]. Ask for one more age and return the values in the array that are over that age. Use higher-class functions.
 
-      var grades = Array();
-      var failing = Array();
+        */
+
+      var age = Array();
       let i = 0;
       while (i < 5) {
-        grades.push(parseInt(prompt("Grade:")));
+        age.push(parseInt(prompt("Age:")));
         i++;
       }
 
+      var comp = parseInt(prompt("Comparative age: "));
       function comparar(x) {
-        if (x < 5) {
-          failing.push(x);
+        if (x > comp) {
+          return x;
         }
       }
 
-      grades.filter(comparar);
-      alert(failing + " is failing");
+      alert(age.filter(comparar));
     </script>
   </body>
 </html>
