@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*22 - Ask for 5 grades and save them in an array called grades[]. Find out if there are any failing grades in the array (below 5). Use higher-class functions. */
+
+      var grades = Array();
+      var failing = Array();
+      let i = 0;
+      while (i < 5) {
+        grades.push(parseInt(prompt("Grade:")));
+        i++;
+      }
+
+      function comparar(x) {
+        if (x < 5) {
+          failing.push(x);
+        }
+      }
+
+      grades.filter(comparar);
+      alert(failing + " is failing");
+    </script>
+  </body>
+</html>
