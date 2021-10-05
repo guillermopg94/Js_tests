@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // A. Write a JavaScript program to calculate how many days are left until next San Jose festivity. 
+
+
+
+
+
+
+
+
+
+
+
+        /* 
+        
+        B. Write a JavaScript function to get the first 'n' elements of an array. Make it arrow.
+        
+        C. Write a JavaScript program to compute the average marks of the students in a class.
+         Then, the average will be used to determine the corresponding grade:
+        
+            Muy deficiente: <2
+            Insuficiente: <5
+            Suficiente: <6
+            Bien: <7
+            Notable: <9
+            Sobresaliente: from 9 on.
+        
+        D. Write a JavaScript program to sum the common multiples of 3 and 5 under 1000. 
+        
+        E. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. 
+        For example, if you accept 025468 the output should be 0-254-6-8.
+        
+        F. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+         Solve the problem not using Sets.
+        
+        G. Write a JavaScript function to convert a string into camel case. For example...
+        
+            console.log(camelize("Desarrollo Aplicaciones Web")); // "desarrolloAplicacionesWeb"
+        
+            console.log(camelize("Desarrollo aplicaciones web")); // "desarrolloAplicacionesWeb" */
+
+        $result = camel("Desarrollo aplicaciones web");
+        alert($result);
+
+        function camel(cadena) {
+
+            var nueva = "";
+
+            nueva = cadena.split(" ");
+            nueva[0]= nueva[0].toLowerCase();
+
+           for (i=1; i<nueva.length;i++){
+                mayus=nueva[i].split("");
+                mayus[0] = mayus[0].toUpperCase();
+               mayus = mayus.join("");
+           } 
+            return mayus;
+        }
+
+    </script>
+</body>
+
+</html>
