@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+C. Write a JavaScript program to compute the average marks of the students in a class.
+         Then, the average will be used to determine the corresponding grade:
+        
+            Muy deficiente: <2
+            Insuficiente: <5
+            Suficiente: <6
+            Bien: <7
+            Notable: <9
+            Sobresaliente: from 9 on.
+
+*/
+
+      let notas = [-5, 1, 1, 1, 1, 30];
+      var suma = 0;
+      let mediaF = (N) => {
+        for (x of N) {
+          suma = N[x] + suma;
+        }
+
+        mediaCalculada = suma / N.length;
+        return mediaCalculada;
+      };
+
+      media = mediaF(notas);
+      if (media < 2) {
+        alert("Muy deficiente");
+      } else if (media < 5 && media > 2) {
+        alert("Insuficiente");
+      } else if (media < 6 && media > 5) {
+        alert("Suficiente");
+      } else if (media < 7 && media > 6) {
+        alert("Bien");
+      } else if (media < 9 && media > 7) {
+        alert("Notable");
+      } else {
+        alert("Sobresaliente");
+      }
+    </script>
+  </body>
+</html>

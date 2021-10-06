@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*    F. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
+         Solve the problem not using Sets. */
+
+      let miArray = ["perro", "gato", "gato", "perro", 'mandarina', 'lechuga', 'mandarina', 'lechuga', 'tomate', 'tomate', 'gato', 'tomate', 'perro'];
+        var newArray = [];
+      miArray.sort();
+      for (let i = 0; i<miArray.length; i++) {
+  
+        
+        if (miArray[i] != miArray[i+1]) {
+            
+           newArray.push(miArray[i]);
+        }
+      }
+
+      alert(newArray);
+    </script>
+  </body>
+</html>
