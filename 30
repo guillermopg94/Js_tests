@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+                30. Create a nested object or nested array to keep track of our vynil collection. 
+                We need to know this information of each vynil:
+                
+                    id: number
+                    album title: string
+                    artist: string
+                    track list: array
+                
+                Complete at least four records.
+                
+                Read an id number from a prompt and use it to show all the information of that vynil.
+                
+                EXTRA: Modify the code to sort the collection of vynils according to a criteria.
+                 This criteria will be asked through a prompt.
+                 */
+
+        var vynil = [
+            {
+                id: 1,
+                "album title": "Holy montain",
+                artist: "sleep",
+                "track list": ["Holy Mountain", "song 2", "song 3"]
+
+            }, {
+                id: 2,
+                "album title": "Dopethrone",
+                artist: "Electric Wizard",
+                "track list": ["song 1", "song 2", "song 3"]
+            }, {
+                id: 3,
+                "album title": "Buse Woods",
+                artist: "Acid King",
+                "track list": ["song 1", "song"]
+            }, {
+                id: 4,
+                "album title": "Black Sabbath",
+                artist: "Black Sabbath",
+                "track list": ["Black Sabbath", "The wizard", ]
+            }
+
+        ];
+var numId = prompt("ID number:" );
+
+for(let i =0; i < vynil.length; i++){
+    if(vynil[i].id== numId){
+        console.log(vynil[i]);
+    }
+
+
+
+}
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
