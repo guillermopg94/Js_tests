@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--  20 - Create a program that asks you if you want to create another user until you press
+no (confirm dialog).
+If the user select yes, ask the name, surname and age (check if the age is a number) and 
+create a collection with as many people as the user has written.
+Then using higher-order functions show in the console if all the users are under 21 and
+create an array with the users that have an even age.
+ -->
+
+<body>
+    <script>
+        window.onload = function () {
+
+            var name = new Array();
+            var surname = new Array();
+            var age = new Array();
+            var edad;
+            while (confirm("New user")) {
+
+                name.push(prompt("Name: "));
+                surname.push(prompt("Surname: "));
+
+                do {
+                    edad = (parseInt(prompt("Age: ")));
+                } while (isNaN(edad));
+
+                age.push(edad);
+
+            }
+
+            function under21(x) {
+
+                return x < 21;
+
+            }
+
+            if (age.every(under21)) {
+                alert("Todos los usuarios tienen menos de 21");
+            } else {
+                alert("No todos los usuarios tienen menos de 21");
+            }
+            function even(x) {
+                return x % 2 == 0;
+            }
+            alert("Los numeros pares son " + age.filter(even));
+        }
+    </script>
+</body>
+
+</html>

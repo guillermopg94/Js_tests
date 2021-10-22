@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Table</title>
+</head>
+
+<body>
+    <script>
+        /*         
+        34. Write a function 
+        to add one row 
+        (at the end) 
+        and one column 
+        (to the right) to this table:
+        */
+        window.onload = function () {
+
+            function añadir() {
+                //añadir columnas
+                var trs = document.getElementsByTagName("tr");
+                var newTd = document.createElement("td");
+                var newTd2 = document.createElement("td");
+                newTd.innerText = "Row1 cell2";
+                newTd2.innerText = "Row2 cell3";
+                trs[0].appendChild(newTd);
+                trs[1].appendChild(newTd2);
+
+                //añadir filas
+                /*var tablas = document.getElementsByTagName("table");
+                var newTd3= document.createElement("td");
+                var newTd4= document.createElement("td");
+                var newTd5= document.createElement("td");
+                var newTr= document.createElement("tr");
+                newTd3.innerText="Row3 cell1";
+                newTd4.innerText="Row3 cell2";
+                newTd5.innerText="Row3 cell3";
+                newTr.appendChild(newTd3);
+                newTr.appendChild(newTd4);
+                newTr.appendChild(newTd5);
+                */
+
+                //añadir filas dinamicamente
+                var tablas = document.getElementsByTagName("table");
+                var newTr = document.createElement("tr");
+                for (i = 0; i < 3; i++) {
+                    let newTd = document.createElement("td");
+                    let d = i + 1;
+                    newTd.innerText = "Row3 cell" + d;
+                    newTr.appendChild(newTd);
+                }
+                tablas[0].appendChild(newTr);
+
+
+            }
+            añadir();
+            /* 35. Copy the last script into a new file and write a 
+       JavaScript function that asks for a row and a column to identify a certain cell. 
+       Then it must ask for a string. With that information, you have to update the content 
+       of that cell with the string. */
+
+
+            function ask() {
+                var row = prompt("Row: ");
+                var column = prompt("Column: ");
+                var word = prompt("Word: ");
+                var trs = document.getElementsByTagName("tr");
+                var tds = document.getElementsByTagName("td");
+
+                row= row - 1;
+                column= column -1;
+            
+                tds[row].innerText = word;
+            }
+
+            ask();
+        }
+
+    </script>
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row1 cell1</td>
+            <td>Row1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row2 cell1</td>
+            <td>Row2 cell2</td>
+        </tr>
+    </table>
+    <!--Try it with Emmet: table>tr*2>td*2 -->
+</body>
+
+</html>

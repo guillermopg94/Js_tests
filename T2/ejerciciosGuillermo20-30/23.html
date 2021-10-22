@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 23. Define an arrow function called divideByTwo 
+        which accepts a number and returns that number divided by 2.
+Define another arrow function call divideTwoNumbers which accept two 
+numbers and returns the larger divided by the smaller. Round the result 
+to its nearest integer.
+ */
+
+
+        var divideByTwo = x => x / 2;
+
+        var divideTwoNumbers = (x, y) => {
+            if (x > y) {
+                var res = Math.round(x / y);
+                return res;
+            } else {
+                alert(y + "es menor que " + x);
+            }
+        };
+        alert(divideByTwo(4));
+
+
+        alert(divideTwoNumbers(43, 13));
+
+    </script>
+</body>
+
+</html>
