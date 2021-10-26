@@ -37,7 +37,23 @@
                 seconds[i].innerText = " ";
             }
 
-            var thirds = document.getElementsByClassName("ol third");
+            var thirds = document.querySelectorAll("ol li.third");
+            for (let i = 0; i < thirds.length; i++) {
+                thirds[i].style.fontFamily="verdana";
+            }
+
+            //var classFooter = document.querySelector("div.footer");
+            //classFooter = classFooter.
+
+            var newLi = document.createElement('li');
+            newLi.innerText='four';
+            var ul = document.getElementsByTagName('ul');
+            ul[0].appendChild(newLi);
+            var lis = document.querySelectorAll('ol li');
+            for(let i of lis){
+                i.style.color='green';
+            }
+
 
 
 
