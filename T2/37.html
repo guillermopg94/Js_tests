@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        /* 37. Given the HTML file lists.html write the code necessary to do the following:
+        
+            Select the section with the id container without using querySelector and write the text "Hello" in it.
+            Select the section with the id container using querySelector and add the text "World" in it.
+            Select all of the list items with a class named second and put the text in bold.
+            Select a list item with a class named third, but only in the ordered list and put it in italics.
+            Add a class named main to the div with the class named footer.
+            Remove the class main on the div with the class named footer.
+            Create a new li element.
+            Give the li the text "four".
+            Append the li to the ul element.
+            Loop over all of the lis inside the ol tag and give them a background color of "green".
+            Remove the div with the class named footer. */
+        window.onload = function () {
+
+            // var section = document.getElementById("container");
+            // section.innerHTML="Hello";
+            // var section2 = document.querySelector("#container");
+            // section2.innerText = "World";
+
+
+            var seconds = document.getElementsByClassName("second");
+
+            for (let i = 0; i < seconds.length; i++) {
+                seconds[i].innerText = " ";
+            }
+
+            var thirds = document.getElementsByClassName("ol third");
+
+
+
+        }
+    </script>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol>
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+</body>
+
+</html>

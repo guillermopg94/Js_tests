@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/*         27 - Create a map with the following pairs index/value:
+        
+            Jose / Teacher
+            Lorenzo / Teacher
+            Nuria / Student
+            Vicente / Student
+            Joaquin / Student
+            Maria / Student
+        
+        Ask using a prompt a name and show with an alert the type of person. 
+        If it doesn't exist show “xxxxxxxxxx doesn't exist in this data collection”.
+        
+        What happens if we add a new element with the same index?  */
+
+        const map= new Map([["Jose","Teacher"], ["Lorenzo","Teacher"], ["Nuria","Student"], 
+        ["Vicente","Student"], ["Joaquin","Student"], ["Maria","Student"]]);
+
+        
+
+
+        name=prompt("Name: ");
+
+        if(map.has(name)){
+           type= map.get(name);
+            alert(name+" is "+ type);
+        }else{
+            alert(name+ "doesn't exist in this data collection");
+        }
+
+
+
+    </script>
+</body>
+</html>

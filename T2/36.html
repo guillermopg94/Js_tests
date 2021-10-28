@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--36. Display a random image from a list of four images every time you reload the page.-->
+
+<body>
+    <script>
+        window.onload = function () {
+
+            var img = document.getElementsByTagName("img");
+
+            var rand = Math.floor(Math.random() * 4);
+
+            var foto = "";
+
+            if (rand == 0) {
+                foto = "1.png";
+            } else if (rand == 1) {
+                foto = "2.jpg";
+            } else if (rand == 2) {
+                foto = "solvam.jpg";
+            } else {
+                foto = "solvam2.jpg";
+            } 
+
+            img[0].src = foto;
+
+        }
+    </script>
+    <img src="" alt="">
+</body>
+
+</html>
