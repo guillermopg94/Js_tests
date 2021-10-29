@@ -23,44 +23,68 @@
         Now create a webpage with pretty header and styles,
         and add as many tiles as items there are in the collection.
         The style of the tile is as follows (the "Remove" button is for a later exercise): */
+        window.onload = function () {
 
-        var Luke = {
-            "Name": "Luke",
-            "Position": "Last Jedi Padawan",
-            "Age": "28",
-            "Points in battle": "7564"
-        };
-        var Leia = {
-            "Name": "Leia",
-            "Position": "Princess",
-            "Age": "28",
-            "Points in battle": "6864"
-        };
-        var Han = {
-            "Name": "Han Solo",
-            "Position": "Smuggler",
-            "Age": "30",
-            "Points in battle": "4564"
-        };
-        var Chewbacca = {
-            "Name": "Chewbacca",
-            "Position": "Smuggler",
-            "Age": "20",
-            "Points in battle": "7564"
-        };
-        var obiWan = {
-            "Name": "Obi Wan",
-            "Position": "Last Jedi Master",
-            "Age": "57",
-            "Points in battle": "10564"
-        };
+            var StarWars = [
+                {
+                    name: "Luke",
+                    Job: "Last Jedi Padawan",
+                    Age: 28,
+                    Points: 7564
+                },
+                {
+                    name: "Leia",
+                    Job: "Princess",
+                    Age: 28,
+                    Points: 6864
+                },
+                {
+                    name: "Han Solo",
+                    Job: "Smuggler",
+                    Age: 30,
+                    Points: 4564
+                },
+                {
+                    name: "Chewbacca",
+                    Job: "Smuggler",
+                    Age: 20,
+                    Points: 7564
+                },
+                {
+                    name: "Obi Wan",
+                    Job: "Last Jedi Master",
+                    Age: 57,
+                    Points: 10564
+                }
+            ];
+            for (let i = 0; i < 5; i++) {
+                var miBody = document.getElementsByTagName("body");
+                var miDiv = document.createElement("div");
+                miBody[0].appendChild(miDiv);
+                var miH1 = document.createElement("h1");
+                miH1.innerText=StarWars[i].name;
+                var miLista = document.createElement("ul");
+                miDiv.appendChild(miH1);
+                miDiv.appendChild(miLista);
+
+                var lis = document.createElement("li");
+                lis.innerText=StarWars[i].Job;
+                miLista.appendChild(lis);
+                var lis = document.createElement("li");
+                lis.innerText=StarWars[i].Age;
+                miLista.appendChild(lis);
+                var lis = document.createElement("li");
+                lis.innerText=StarWars[i].Points;
+                miLista.appendChild(lis);
+          
+    
 
 
-
-        
+            }
+        }
     </script>
 
-<div class="card"></div>
+   
 
 </body>
 
