@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 
-
 body{
     font-family: 'Roboto';
     background-image: url("img/hot.jpg");  
@@ -27,4 +26,7 @@ img{
 h1{
     margin-left: 35px;  
     color: yellow;
+}
+.sith{
+    border: 5px solid rgb(139, 46, 46);
 }
