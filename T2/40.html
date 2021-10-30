@@ -99,8 +99,33 @@
                 }
             ];
 
-         
             for (let i = 0; i < 10; i++) {
+                    if (i>6){
+                        var miBody = document.getElementsByTagName("body");
+                var miDiv = document.createElement("div");
+                miBody[0].appendChild(miDiv);
+                var miImg = document.createElement("img");
+                miImg.classList.add("sith");
+                miImg.src=StarWars[i].img;
+                miDiv.appendChild(miImg);
+                var miH1 = document.createElement("h1");
+                miH1.innerText=StarWars[i].name;
+                miDiv.appendChild(miH1);
+                var miLista = document.createElement("ul");
+                miDiv.appendChild(miLista);
+                var lis = document.createElement("li");
+                lis.innerText="Ocupation: "+StarWars[i].Job;
+             
+                miLista.appendChild(lis);
+                var lis = document.createElement("li");
+            
+                lis.innerText= "Age: "+StarWars[i].Age;
+                miLista.appendChild(lis);
+                var lis = document.createElement("li");
+                
+                lis.innerText="Points in battle: "+StarWars[i].Points;
+                miLista.appendChild(lis);
+                    } else {
                 var miBody = document.getElementsByTagName("body");
                 var miDiv = document.createElement("div");
                 miBody[0].appendChild(miDiv);
@@ -121,6 +146,8 @@
                 var lis = document.createElement("li");
                 lis.innerText="Points in battle: "+StarWars[i].Points;
                 miLista.appendChild(lis);
+                    }
+ 
             }
         }
     </script>
