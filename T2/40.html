@@ -101,8 +101,9 @@
 
             for (let i = 0; i < 10; i++) {
                     if (i>6){
-                        var miBody = document.getElementsByTagName("body");
+                var miBody = document.getElementsByTagName("body");
                 var miDiv = document.createElement("div");
+                miDiv.classList.add("sith");
                 miBody[0].appendChild(miDiv);
                 var miImg = document.createElement("img");
                 miImg.classList.add("sith");
@@ -115,14 +116,11 @@
                 miDiv.appendChild(miLista);
                 var lis = document.createElement("li");
                 lis.innerText="Ocupation: "+StarWars[i].Job;
-             
                 miLista.appendChild(lis);
                 var lis = document.createElement("li");
-            
                 lis.innerText= "Age: "+StarWars[i].Age;
                 miLista.appendChild(lis);
-                var lis = document.createElement("li");
-                
+                var lis = document.createElement("li");                
                 lis.innerText="Points in battle: "+StarWars[i].Points;
                 miLista.appendChild(lis);
                     } else {
@@ -146,8 +144,7 @@
                 var lis = document.createElement("li");
                 lis.innerText="Points in battle: "+StarWars[i].Points;
                 miLista.appendChild(lis);
-                    }
- 
+                    } 
             }
         }
     </script>
