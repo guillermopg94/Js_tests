@@ -1,0 +1,40 @@
+<!-- 43. Create a HTML file with just one paragraph in it:
+
+When the mouse moves over the paragraph, its background must change to gray.
+When the mouse moves out of the paragraph, its background must change to green.
+When the paragraph is clicked, its background must change to red.
+When the paragraph is double clicked, its background must change to blue. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var MiP = document.querySelector("p");
+            MiP.onmouseover = function(){
+                MiP.style.backgroundColor="grey";
+            };
+            MiP.onmouseout= function(){
+                MiP.style.backgroundColor="green";
+            };
+            MiP.onclick = function(){
+                MiP.style.backgroundColor="red";
+            };
+            MiP.ondblclick = function(){
+                MiP.style.backgroundColor="blue";
+            };
+        }
+    </script>
+
+    <p>When the mouse moves over the paragraph, its background must change to gray.
+        When the mouse moves out of the paragraph, its background must change to green.
+        When the paragraph is clicked, its background must change to red.
+        When the paragraph is double clicked, its background must change to blue. </p>
+    
+</body>
+</html>

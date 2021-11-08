@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    /* 
+     45. Create an html page with 3 images and 4 buttons with the following functions:
+    
+    Scroll to the first image
+    Scroll to the second image
+    Scroll to the third image
+    Shuffle images
+    46. Write a JS program that shows the current coordinates of your mouse cursor
+    */
+    var miBody = document.getElementsByTagName("body");
+    var miImg = document.createElement("img");
+
+    miImg.src="img/fondo.jpg";
+    miBody[0].appendChild(miImg);
+
+    var miImg = document.createElement("img");
+    miImg.src="img/hot.jpg";
+    miBody[0].appendChild(miImg);
+
+    var miImg = document.createElement("img");
+    miImg.src="img/chiwi.jpg";
+    miBody[0].appendChild(miImg);
+
+    var miBoton = document.createElement("input");
+    miBoton.type="button"
+    miBoton.value="Scroll 1"
+    miBody[0].appendChild(miBoton);
+    var miBoton1 = document.createElement("input");
+    miBoton1.type="button"
+    miBoton1.value="Scroll 2"
+    miBody[0].appendChild(miBoton1);
+    var miBoton2 = document.createElement("input");
+    miBoton2.type="button"
+    miBoton2.value="Scroll 3"
+    miBody[0].appendChild(miBoton2);
+
+    miBoton[0].onclick=function(){
+        
+        
+
+    }
+
+</script>
+
+
+</body>
+</html>

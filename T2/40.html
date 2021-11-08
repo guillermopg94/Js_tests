@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='players.css'>
+</head>
+
+<body>
+    <script>
+        /* 40. Create a collection with at least 5 basketball players.
+         Each object will have the following information:
+        
+            Name
+            Position
+            Image
+            Age
+            Points per game
+        
+        Now create a webpage with pretty header and styles,
+        and add as many tiles as items there are in the collection.
+        The style of the tile is as follows (the "Remove" button is for a later exercise): */
+        window.onload = function () {
+
+            var StarWars = [
+                {
+                    img: "img/luke.jpg",
+                    name: "Luke",
+                    Job: "Last Jedi Padawan",
+                    Age: 28,
+                    Points: 11564
+                },
+                {
+                    img: "img/leia.jpg",
+                    name: "Leia",
+                    Job: "Princess",
+                    Age: 28,
+                    Points: 6864
+                },
+                {
+                    img: "img/han.jpg",
+                    name: "Han Solo",
+                    Job: "Smuggler",
+                    Age: 30,
+                    Points: 4564
+                },
+                {
+                    img: "img/chiwi.jpg",
+                    name: "Chewbacca",
+                    Job: "Smuggler",
+                    Age: 20,
+                    Points: 7564
+                },
+                {
+                    img: "img/obi.jpg",
+                    name: "Obi Wan",
+                    Job: "Last Jedi Master",
+                    Age: 57,
+                    Points: 10564
+                },
+                {
+                    img: "img/yoda.jpg",
+                    name: "Yoda",
+                    Job: "Oldest Jedi",
+                    Age: 807,
+                    Points: 10984
+                },
+                {
+                    img: "img/ani.jpg",
+                    name: "Anakin",
+                    Job: "Chosen Jedi",
+                    Age: 27,
+                    Points: 13021
+                },
+
+                {
+                    img: "img/boba.jpg",
+                    name: "Boba Fett",
+                    Job: "Bounty Hunt",
+                    Age: 37,
+                    Points: 7899
+                },
+                {
+                    img: "img/vader.jpg",
+                    name: "Darth Vader",
+                    Job: "Sith",
+                    Age: 50,
+                    Points: 14121
+                },
+                {
+                    img: "img/sidius.jpg",
+                    name: "Darth Sidius",
+                    Job: "Lord Sith",
+                    Age: 64,
+                    Points: 11063
+                }
+            ];
+
+            for (let i = 0; i < 10; i++) {
+                if (i > 6) {
+                    var miBody = document.getElementsByTagName("body");
+                    var miDiv = document.createElement("div");
+                    miDiv.classList.add("sith");
+                    miBody[0].appendChild(miDiv);
+                    var miImg = document.createElement("img");
+                    miImg.classList.add("sith");
+                    miImg.src = StarWars[i].img;
+                    miDiv.appendChild(miImg);
+                    var miH1 = document.createElement("h1");
+                    miH1.innerText = StarWars[i].name;
+                    miDiv.appendChild(miH1);
+                    var miLista = document.createElement("ul");
+                    miDiv.appendChild(miLista);
+                    var lis = document.createElement("li");
+                    lis.innerText = "Ocupation: " + StarWars[i].Job;
+                    miLista.appendChild(lis);
+                    var lis = document.createElement("li");
+                    lis.innerText = "Age: " + StarWars[i].Age;
+                    miLista.appendChild(lis);
+                    var lis = document.createElement("li");
+                    lis.innerText = "Points in battle: " + StarWars[i].Points;
+                    miLista.appendChild(lis);
+                    var miBoton = document.createElement("input");
+                    miBoton.type = "Button";
+                    miBoton.value = "Borrar";
+                    miLista.appendChild(miBoton);
+
+                } else {
+                    var miBody = document.getElementsByTagName("body");
+                    var miDiv = document.createElement("div");
+                    miBody[0].appendChild(miDiv);
+                    var miImg = document.createElement("img");
+                    miImg.src = StarWars[i].img;
+                    miDiv.appendChild(miImg);
+                    var miH1 = document.createElement("h1");
+                    miH1.innerText = StarWars[i].name;
+                    miDiv.appendChild(miH1);
+                    var miLista = document.createElement("ul");
+                    miDiv.appendChild(miLista);
+                    var lis = document.createElement("li");
+                    lis.innerText = "Ocupation: " + StarWars[i].Job;
+                    miLista.appendChild(lis);
+                    var lis = document.createElement("li");
+                    lis.innerText = "Age: " + StarWars[i].Age;
+                    miLista.appendChild(lis);
+                    var lis = document.createElement("li");
+                    lis.innerText = "Points in battle: " + StarWars[i].Points;
+                    miLista.appendChild(lis);
+                    var miBoton = document.createElement("input");
+                    miBoton.type = "Button";
+                    miBoton.value = "Borrar";
+                    miLista.appendChild(miBoton);
+                }
+            }
+            var miBoton = document.getElementsByTagName("input");
+            for(let boton of miBoton){
+                boton.onclick = function (event) {
+                event.target.parentElement.parentElement.style.display = 'none';
+            }
+            }
+            
+
+
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>
