@@ -127,6 +127,10 @@
                     miBoton.type = "Button";
                     miBoton.value = "Borrar";
                     miLista.appendChild(miBoton);
+                    var miBoton2 = document.createElement("input");
+                    miBoton2.type = "Button";
+                    miBoton2.value = "Modificar";
+                    miLista.appendChild(miBoton2);
 
                 } else {
                     var miBody = document.getElementsByTagName("body");
@@ -153,15 +157,27 @@
                     miBoton.type = "Button";
                     miBoton.value = "Borrar";
                     miLista.appendChild(miBoton);
+                    var miBoton2 = document.createElement("input");
+                    miBoton2.type = "Button";
+                    miBoton2.value = "Modificar";
+                    miLista.appendChild(miBoton2);
                 }
             }
             var miBoton = document.getElementsByTagName("input");
-            for(let boton of miBoton){
-                boton.onclick = function (event) {
-                event.target.parentElement.parentElement.style.display = 'none';
+
+            for (let boton of miBoton) {
+                if (boton.value == "Borrar") {
+                    boton.onclick = function (event) {
+                        event.target.parentElement.parentElement.style.display = 'none';
+                    }
+                } else {
+                    boton.onclick = function (event) {
+                        event.target.parentElement.parentElement.children[1].innerText=prompt("Introduce:");
+                    }
+
+                }
             }
-            }
-            
+
 
 
 
