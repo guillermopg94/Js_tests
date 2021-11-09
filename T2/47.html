@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/* 7. Create an html page with one image with the following functions:
+
+    When the page is loaded, create with JavaScript a new h1 element welcoming the new user.
+    When the mouse is over the image, swap to another image. When it's out, load back the original image.
+    When you click on the image, show the following alert "Stop clicking me!!" */
+
+    window.onload = function(){
+        var miBody = document.getElementsByTagName("body");
+        var newH1 = document.createElement("h1");
+        miBody[0].appendChild(newH1);
+        newH1.innerHTML = "Wellcome new user";
+        var miImg = document.createElement("img");
+        miImg.src="1.png";
+        newH1.appendChild(miImg);
+
+        miImg.onmouseover = function(){
+            miImg.src = "2.jpg";
+        };
+        miImg.onmouseout= function(){
+            miImg.src = "1.png";
+            };
+            miImg.onclick = function(){
+                alert("Stop clicking me!");
+            };
+    }
+    </script>
+</body>
+</html>
