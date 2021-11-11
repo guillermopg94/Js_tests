@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 49. Create an html with 2 buttons:
+        
+            The first button will open a window with a height and a width of 100 pixels. 
+            The new window will have red color, no toolbar, no menu and no address box.
+            The second button will resize that window to a height and a width of 250. 
+            The second window will get the focus. */
+            window.onload = function(){
+
+           
+        var miBody = document.getElementsByTagName("body");
+        var boton1 = document.createElement("input");
+        boton1.type = "button";
+        boton1.value = "boton1";
+        var boton2 = document.createElement("input");
+        boton2.type = "button";
+        boton2.value = "boton2"
+        miBody[0].appendChild(boton1);
+        miBody[0].appendChild(boton2);
+       
+                
+                    boton1.onclick = function () {
+                        var newwindow =  window.open("", "nuevo",  "directories=no, location=no, menubar=no, scrollbars=yes, statusbar=no, tittlebar=no, width=100, height=100");
+                        newwindow.document.body.style.background = "red";
+                    }
+                    boton2.onclick = function () {
+                        var newwindow =  window.open("", "nuevo",  "directories=no, location=no, menubar=no, scrollbars=yes, statusbar=no, tittlebar=no, width=100, height=100");
+                        newwindow.resizeTo(250,250);
+                    }
+                }
+    </script>
+</body>
+
+</html>
