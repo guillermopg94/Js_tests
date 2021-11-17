@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      window.onload = function () {
+        /*
+52. Given the HTML file registration_form.html build a validator for the registration form. It must validate each field when the user has finished entering data in it, that is, after losing focus. If the field does not meet the restrictions, an alert will be displayed to the user, but they will be allowed to continue entering data in the rest of the fields.
+
+When the user submits the form (submit event), all the fields will be validated and the form will not be submitted if any of the fields are invalid. The restrictions to comply with are the following:
+
+Name, email and comments are required fields.
+Email must be a valid email address.
+The text entered in the comment field must not exceed 50 characters.
+The password must be at least 6 characters long, and contain at least one lowercase, one uppercase, and one digit.
+53. Create a webpage with an input text using JS. When the user writes one of the following letters d,a,w in the input you have to show a message in red just below the input: “The letter x is not allowed in this page” and the letter does not have to appear in the input. Other letters has to appear as usual and message has to dissapear.
+
+54. Use an input text to check the password strength. Show at the right of it a different text if the password strength is low, medium or high. Follow these rules:
+
+Only letters or only numbers - low
+Letters and numbers - medium
+Letters and numbers and symbols - high
+*/
+
+        var miInputText = document.createElement("input");
+        var miBody = document.getElementsByTagName("body");
+        miInputText.type = "text";
+        miBody[0].appendChild(miInputText);
+        var miP = document.createElement("p");
+        miBody[0].appendChild(miP);
+        miP.style.visibility = "hidden";
+
+
+        miInputText.addEventListener("keyup", myFunction); 
+
+        function myFunction() {
+          var valores = [ "w", "d", "a"];
+
+          for (var valor of valores) {
+
+            var value = miInputText.value;
+
+            if (!value.indexOf(valor)  /* != -1 */ ) {
+              miP.innerText = "The letter " + valor + " is not allowed in this page";
+              miP.style.visibility = "visible";
+            } else {
+              miP.style.visibility = "hidden";
+            }
+
+
+          }
+        }
+
+        /* 
+      
+        
+        
+        
+        */
+        
+      }
+    </script>
+  </body>
+</html>
